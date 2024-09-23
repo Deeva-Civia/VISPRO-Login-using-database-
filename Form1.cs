@@ -23,7 +23,7 @@ namespace login_database
         private string alamat, query;
         public Form1()
         {
-            alamat = "server=localhost; database=db_login; username=root; password=;";
+            alamat = "server=localhost; database=db_mahasiswa; username=root; password=;";
             koneksi = new MySqlConnection(alamat);
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace login_database
         {
             try
             {
-                query = string.Format("select * from user where username = '{0}'", textBox1.Text);
+                query = string.Format("select * from tbl_pengguna where username = '{0}'", textBox1.Text);
                 ds.Clear();
                 koneksi.Open();
                 perintah = new MySqlCommand(query, koneksi);
