@@ -226,6 +226,13 @@ namespace login_database
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormPengguna formPengguna = new FormPengguna();
+            formPengguna.Show();
+
+        }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
             try
